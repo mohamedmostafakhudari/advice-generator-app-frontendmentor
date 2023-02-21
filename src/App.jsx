@@ -33,43 +33,51 @@ function App() {
     }
   }
   return (
-    <main>
-      <div className="container grid min-h-screen items-center mx-auto px-3 md:px-0">
-        <div className="bg-grayishBlue-d relative p-6 pt-10 pb-16 rounded-lg min-h-[300px] md:max-w-lg md:mx-auto">
-          <h4 className="text-neonGreen uppercase text-[12px] tracking-[4px] text-center">
-            advice{" "}
-            <span className="ml-1 tracking-[4px]">
-              #{loading ? "" : quote.id}
-            </span>
-          </h4>
-          <blockquote
-            cite="https://api.adviceslip.com/advice"
-            className="text-white text-quote py-6 text-center"
-          >
-            “{loading ? "Loading..." : quote.advice}”
-          </blockquote>
-          <div>
-            <picture className="">
-              <source
-                media="(min-width:768px)"
-                srcSet="./assets/images/pattern-divider-desktop.svg"
-              />
-              <img
-                src="./assets/images/pattern-divider-mobile.svg"
-                alt="divider"
-                className="mx-auto"
-              />
-            </picture>
-          </div>
-          <div
-            onClick={handleReroll}
-            className="bg-neonGreen w-fit p-5 rounded-full absolute left-1/2 top-full -translate-y-1/2 -translate-x-1/2 cursor-pointer duration-200 ease-in-out hover:shadow-dice"
-          >
-            <img src="./assets/images/icon-dice.svg" alt="dice" />
+    <>
+      <main>
+        <div className="container grid min-h-screen items-center mx-auto px-3 md:px-0">
+          <div className="bg-grayishBlue-d relative p-6 pt-10 pb-16 rounded-lg min-h-[300px] md:max-w-lg md:mx-auto">
+            <h4 className="text-neonGreen uppercase text-[12px] tracking-[4px] text-center">
+              advice{" "}
+              <span className="ml-1 tracking-[4px]">
+                #{loading ? "" : quote.id}
+              </span>
+            </h4>
+            <blockquote
+              cite="https://api.adviceslip.com/advice"
+              className="text-cyan-l text-quote py-6 text-center"
+            >
+              “{loading ? "Loading..." : quote.advice}”
+            </blockquote>
+            <div>
+              <picture className="">
+                <source
+                  media="(min-width:768px)"
+                  srcSet="./assets/images/pattern-divider-desktop.svg"
+                />
+                <img
+                  src="./assets/images/pattern-divider-mobile.svg"
+                  alt="divider"
+                  className="mx-auto"
+                />
+              </picture>
+            </div>
+            <div
+              onClick={handleReroll}
+              className="bg-neonGreen w-fit p-5 rounded-full absolute left-1/2 top-full -translate-y-1/2 -translate-x-1/2 cursor-pointer duration-200 ease-in-out hover:shadow-dice"
+            >
+              <img src="./assets/images/icon-dice.svg" alt="dice" />
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+      <footer className="absolute bg-grayishBlue text-cyan-l py-2 text-sm bottom-0 w-full text-center">
+        Made With <span className="text-neonGreen text-lg">&lt;3</span> By{" "}
+        <span className="text-neonGreen font-bold text-lg ml-1">
+          Mohamed Mostafa
+        </span>
+      </footer>
+    </>
   );
 }
 
