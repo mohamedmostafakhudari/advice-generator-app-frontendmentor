@@ -13,6 +13,9 @@ module.exports = {
       fontSize: {
         quote: "28px",
       },
+      boxShadow: {
+        dice: "0px 0px 35px 0px hsl(150, 100%, 66%)",
+      },
     },
     fontFamily: {
       body: ['"Manrope"', "sans-serif"],
