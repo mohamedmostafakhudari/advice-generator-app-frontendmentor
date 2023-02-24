@@ -34,7 +34,7 @@ function App() {
   }
   return (
     <>
-      <main>
+      <main className="relative">
         <div className="container grid min-h-screen items-center mx-auto px-3 md:px-0">
           <div className="bg-grayishBlue-d relative p-6 pt-10 pb-16 rounded-lg min-h-[300px] md:max-w-lg md:mx-auto">
             <h4 className="text-neonGreen uppercase text-[12px] tracking-[4px] text-center">
@@ -70,13 +70,13 @@ function App() {
             </div>
           </div>
         </div>
+        <footer className="absolute bg-grayishBlue text-cyan-l py-2 text-sm bottom-0 w-full text-center">
+          Made With <span className="text-neonGreen text-lg">&lt;3</span> By{" "}
+          <span className="text-neonGreen font-bold text-lg ml-1">
+            Mohamed Mostafa
+          </span>
+        </footer>
       </main>
-      <footer className="absolute bg-grayishBlue text-cyan-l py-2 text-sm bottom-0 w-full text-center">
-        Made With <span className="text-neonGreen text-lg">&lt;3</span> By{" "}
-        <span className="text-neonGreen font-bold text-lg ml-1">
-          Mohamed Mostafa
-        </span>
-      </footer>
     </>
   );
 }
